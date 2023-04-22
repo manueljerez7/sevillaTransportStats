@@ -1,0 +1,99 @@
+/* Reset de estilos para quitar márgenes, rellenos y estilos de lista predeterminados */
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Fondo oscuro y color de texto claro */
+body.dark-mode {
+	background-color: #1c1c1c;
+	color: #f5f5f5;
+}
+
+/* Encabezado con fuente personalizada y texto en mayúsculas */
+header {
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+	font-size: 2rem;
+	margin: 1rem;
+}
+
+/* Menú de navegación con animación de transición */
+nav {
+	display: flex;
+	justify-content: center;
+	margin: 1rem;
+}
+
+nav ul {
+	display: flex;
+}
+
+nav li {
+	margin: 0 1rem;
+}
+
+nav a {
+	display: block;
+	padding: 1rem;
+	color: #f5f5f5;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+	background-color: #f5f5f5;
+	color: #1c1c1c;
+}
+
+/* Área principal con diseño de cuadrícula */
+main {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1rem;
+	margin: 1rem;
+}
+
+/* Títulos de sección en mayúsculas y subrayado animado */
+section h2 {
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	position: relative;
+}
+
+section h2::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 3px;
+	width: 100%;
+	background-color: #f5f5f5;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.3s ease-in-out;
+}
+
+section h2:hover::after {
+	transform: scaleX(1);
+}
+
+/* Área lateral con fondo claro y margen interno */
+aside {
+	background-color: #f5f5f5;
+	padding: 1rem;
+	margin: 1rem;
+}
+
+/* Pie de página con margen superior y derecho */
+footer {
+	margin-top: 1rem;
+	margin-right: 1rem;
+	text-align: right;
+	font-size: 0.8rem;
+	color: #f5f5f5;
+	font-family: 'Roboto Condensed', sans-serif;
+}

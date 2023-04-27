@@ -1,4 +1,4 @@
-stop_name,stop_id,avgFreqLab,avgFreqVie,avgFreqSab,avgFreqFest,increaseSab,increaseFest
+Nombre de la parada,Código de parada,Tiempo medio laborables,Tiempo medio Viernes,Tiempo medio Sábado,Tiempo medio Domingos,% incremento sábados,% incremento domingos
 Campana (Sierpes),1,8.264010697849761,8.264010697849761,9.162997147775341,12.844155844155843,10.878331149298859,55.422788204979014
 Menéndez Pelayo (Puerta Carmona),2,11.013344958230455,11.416945623050792,18.618759724379192,17.00864062851615,69.05635658370153,54.43664656853695
 Menéndez Pelayo (Puerta de La Carne),3,10.569357148184205,10.826993209390201,18.069714070111264,16.377407402464918,70.96322715535833,54.9517834703743

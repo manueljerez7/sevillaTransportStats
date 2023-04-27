@@ -1,119 +1,76 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Mi sitio web</title>
-    <style>
-      body {
-        background-color: #c4ebfc;
-        background-size: cover;
-        color: whitesmoke;
-        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      }
+<html lang="en">
 
-      .content {
-        color: #b40129;
-      }
-      
-      .sidebar img {
-        /* Establecemos una forma circular para la imagen */
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        margin-bottom: 10px;
-        box-shadow: 0 0 10px #F6A704;
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSV to HTML Table</title>
+    <meta name="author" content="Derek Eder">
+    <meta content="Display any CSV file as a searchable, filterable, pretty HTML table">
 
-      }
-      .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 200px;
-        height: 100%;
-        padding: 20px;
-        box-shadow: 0 0 10px #F6A704;
-        border: 1px solid black;
-        background-color: #b40129;
-        opacity: 0.8;
-        margin-left: 2%;
-      }
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+</head>
 
-      .sidebar img {
-        /* Establecemos una forma circular para la imagen */
-        border-radius: 50%;
-        width: 100%;
-        height: 32%;
-        object-fit: cover;
-        margin-bottom: 10px;
-        text-align: center;
-      }
-      .content {
-        margin-left: 220px;
-        /* aumentamos el margen para que no se solape con la barra lateral */
-        padding: 50px;
-      }
+<body>
+    <div class="container-fluid">
+        <main class="row">
+            <div class="col">
+                <h1>CSV to HTML Table</h1>
 
-      .content .mapas{
-        margin: 3%;
-      }
-      
-       .content a {
-        color: #b40129;
-        }
+                <p>Display any CSV file as a searchable, filterable, pretty HTML table. Done in 100% JavaScript. <a
+                        href="https://github.com/derekeder/csv-to-html-table">Code
+                        on GitHub</a>.</p>
 
-        .sidebar a {
-        color: #F6A704;
-        }
+                <p> Here's a table of Health Clinics from the <a href="https://data.cityofchicago.org/browse?q=health%20clinic&sortBy=relevance&utf8=%E2%9C%93">City
+                        of Chicago Data Portal</a>.
+                </p>
 
-        a:link, a:visited, a:active {
-        text-decoration:none;
-        }
-      
-        .title{
-            margin-left: 1%;
-        }
-
-    </style>
-  </head>
-  <body>
-    <div class="sidebar">
-    <img src="profile.jpg" alt="Foto de perfil de Juan Pérez">
-      <h2>Manuel Jerez González</h2>
-      <p><b>Contacto:</b></p>
-      <ul>
-        <li><a href="https://twitter.com/manueljerezg" target="_blank"><i class="fa fa-twitter"></i><b>Twitter</b></a></li>
-        <li><a href="https://www.instagram.com/manueljerez7" target="_blank"><i class="fa fa-instagram"></i><b>Instagram</b></a></li>
-        <li><a href="https://www.linkedin.com/manuel-jerez-gonzalez" target="_blank"><i class="fa fa-linkedin"></i><b>LinkedIn</b></a></li>
-      
-      </ul>
+                <div id="table-container"></div>
+            </div>
+        </main>
+        <footer class="row">
+            <div class="col">
+                <hr>
+                <p class="text-right"><a href="https://github.com/derekeder/csv-to-html-table">CSV to HTML Table</a> by
+                    <a href="http://derekeder.com">Derek
+                        Eder</a></p>
+            </div>
+        </footer>
     </div>
-    
-    <div class="content">
-    <h1 class="title">Estadísticas de Transporte TUSSAM</h1>
-      <div class="mapas">
-            <h3>Mapas</h3>
-            <ul><b>
-                <li><a href="avgFreqLab.html">Frecuencia media de paso en días laborables</a></li>
-                <li><a href="avgFreqVie.html">Frecuencia media de paso en viernes</a></li>
-                <li><a href="avgFreqSab.html">Frecuencia media de paso en sábados</a></li>
-                <li><a href="avgFreqFest.html">Frecuencia media de paso en festivos</a></li>
-                <li><a href="increaseSab.html">Incremento del tiempo medio de paso en sábados</a></li>
-                <li><a href="increaseFest.html">Incremento del tiempo medio de paso en festivos</a></li>
-                <li><a href="speedLab.html">Velocidad media de las rutas en días laborables</a></li>
-                <li><a href="speedVie.html">Velocidad media de las rutas en viernes</a></li>
-                <li><a href="speedSab.html">Velocidad media de las rutas en sábados</a></li>
-                <li><a href="speedFest.html">Velocidad media de las rutas en festivos</a></li>
-                <li><a href="departuresLab.html">Tiempo medio entre salidas de las rutas en días laborables</a></li>
-                <li><a href="departuresVie.html">Tiempo medio entre salidas de las rutas en viernes</a></li>
-                <li><a href="departuresSab.html">Tiempo medio entre salidas de las rutas en sábados</a></li>
-                <li><a href="departuresFest.html">Tiempo medio entre salidas de las rutas en festivos</a></li>
-            </b></ul>
-        <div class="project-section">
-            <h2 class="project-title">Sobre el proyecto</h2>
-            <p> Bla bla bla </p>
-          </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.csv.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/csv_to_html_table.js"></script>
 
-        </div>
-    </div>
-  </body>
+    <script>
+        function format_link(link) {
+            if (link)
+                return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+            else return "";
+        }
+
+        CsvToHtmlTable.init({
+            csv_path: "data/frequencies.csv",
+            element: "table-container",
+            allow_download: true,
+            csv_options: {
+                separator: ",",
+                delimiter: '"'
+            },
+            datatables_options: {
+                paging: false
+            },
+            custom_formatting: [
+                [4, format_link]
+            ]
+        });
+    </script>
+</body>
+
 </html>

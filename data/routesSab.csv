@@ -1,4 +1,4 @@
-route_id,direction_id,trip_headsign,shape_id,route_short_name,startOfService,endOfService,avgDepartureTime,avgDuration,nStops,avgSpeed
+Identificador de ruta,Sentido,Destino,Identificador de forma,Nombre de la ruta,Inicio del servicio,Final del servicio,Tiempo medio entre salidas [min],Duración media del servicio [min],Número de paradas,Velocidad media [km/h]
 1,0,POLIGONO NORTE,111,01,06:06:00,23:11:00,19.71153846153846,39.132075471698116,21.0,13.939079764719029
 1,1,HOSPITAL V.ROCIO,112,01,06:05:00,23:12:00,19.37735849056604,40.35185185185186,24.98148148148148,10.635908104354371
 2,0,CARTUJA        ,211,02,05:46:00,23:02:00,11.908045977011493,59.74999999999999,32.45454545454545,14.706386279467438

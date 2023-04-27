@@ -1,4 +1,4 @@
-Identificador de ruta,Sentido,Destino,Identificador de forma,Nombre de la ruta,Inicio del servicio,Final del servicio,Tiempo medio entre salidas,Duración media del servicio,Número de paradas,Velocidad media
+Identificador de ruta,Sentido,Destino,Identificador de forma,Nombre de la ruta,Inicio del servicio,Final del servicio,Tiempo medio entre salidas [min],Duración media del servicio [min],Número de paradas,Velocidad media [km/h]
 1,0,POLIGONO NORTE,111,01,06:19:00,23:15:00,9.153153153153152,40.06250000000001,21.0,13.628449850174746
 1,1,HOSPITAL V.ROCIO,112,01,06:04:00,23:14:00,9.196428571428573,44.25663716814159,24.938053097345133,9.712277027678786
 2,0,CARTUJA        ,211,02,05:45:00,23:01:00,7.0,63.82550335570472,32.2751677852349,13.799050956670268
